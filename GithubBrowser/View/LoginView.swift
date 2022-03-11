@@ -22,17 +22,21 @@ struct LoginView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 160, height: 160, alignment: .center)
-                    .padding(.vertical, 60)
+                    .padding(.top, 60)
+                Text("GitHub Browser")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.accentColor)
                 Spacer()
                 VStack {
                     
                     // Text field for username
-                    LoginTextField(hintString: "Username", inputString: $viewModel.credential.username)
+                    LoginTextField(hintString: "GitHub username", inputString: $viewModel.credential.username)
                     
                     Spacer().frame(height: 20)
                     
                     // Text field for password
-                    LoginTextField(hintString: "Password", inputString: $viewModel.credential.password
+                    LoginTextField(hintString: "password", inputString: $viewModel.credential.password
                                    , isSecure: true)
                     
                     Spacer().frame(height: 50)
