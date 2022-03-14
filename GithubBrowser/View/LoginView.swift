@@ -60,7 +60,6 @@ struct LoginView: View {
             }
             
         }.onChange(of: viewModel.state) { state in
-            // This is how you execute a closure in viewbuilder!
             if state == .finish {
                 authentication.updateValidation(success: true)
             }
