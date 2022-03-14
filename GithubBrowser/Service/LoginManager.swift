@@ -14,7 +14,6 @@ import SwiftSoup
 struct LoginManager {
     static let urlString = "https://github.com/session"
     static let contentType = "application/x-www-form-urlencoded"
-    static let sharedCookiesKey = "Shared Cookies"
     
     /// Fetch the login page html in form of String.
     static func getLoginPage(handler: @escaping ResultHandler<String>) {
